@@ -5,9 +5,7 @@ const ListScreen = (props) => {
     let timer;
     const scrollEvent = () => {
       clearTimeout(timer);
-      timer = setTimeout(() => {
-        console.log('scroll event');
-      }, 500);
+      timer = setTimeout(() => console.log('scroll event'), 500);
     };
     window.addEventListener('scroll', scrollEvent);
     return () => window.removeEventListener('scroll', scrollEvent);
