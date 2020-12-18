@@ -35,6 +35,8 @@ const DetectScrollEvent = () => {
       timer = setTimeout(() => console.log('scroll event'), 500);
     };
     window.addEventListener('scroll', scrollEvent);
+
+    // add cleanup function
     return () => window.removeEventListener('scroll', scrollEvent);
   }, []);
 }
